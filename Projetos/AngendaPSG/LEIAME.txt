@@ -1,0 +1,5 @@
+Agenda feita usando PySimpleGUI
+
+para instalar a biblioteca
+
+pip install PySimpleGUI
