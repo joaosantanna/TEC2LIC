@@ -7,15 +7,17 @@ layout = [
     [sg.Text("Nome", size=(15, 1)), sg.InputText()],
     [sg.Text("Endereço", size=(15, 1)), sg.InputText()],
     [sg.Text("Telefone", size=(15, 1)), sg.InputText()],
-    [sg.Submit(), sg.Button("Sair")],
+    [sg.Button("Processar", size=(10, 1)), sg.Button("Sair", size=(10, 1))],
 ]
 
-janela = sg.Window("Exemplo Simples", font=("Currier", 14)).layout(layout)
+janela = sg.Window("Exemplo Simples", layout=layout, font=("Currier", 14))
 
-botao, valores = janela.Read()
 
 while True:
+    botao, valores = janela.Read()
+
     if botao == "Sair":
         break
-    if botao == "Submit":
+    if botao == "Processar":
         print(f"botao:{botao} - valores:{valores}")
+        janela[2].update("9876-0011")

@@ -1,12 +1,12 @@
 import PySimpleGUI as sg
-from math import sqrt
+from math import sqrt, ceil
 
 sg.theme("LightGrey1")  # Add a touch of color
 
 layout = [
     [sg.Text("Digite o valor para calcular a raiz Quadrada")],
     [sg.Text("Valor", size=(15, 1)), sg.InputText()],
-    [sg.Text("Resultado", size=(15, 1)), sg.InputText(key="Resultado")],
+    [sg.Text("Resultado", size=(15, 1)), sg.InputText(key="resultado")],
     [sg.Button("Calcular", size=(10, 1)), sg.Button("Sair", size=(10, 1))],
 ]
 
@@ -18,9 +18,11 @@ while True:
     if botao in ("Sair", sg.WIN_CLOSED):
         break
     elif botao == "Calcular":
+        print(f"botao:{botao} - valores:{valores}")
         valor = float(valores[0])
-        resultado = sqrt(valor)
-        janela["Resultado"].Update(f"{resultado:.2f}")
+        resultado = ceil(sqrt(valor))
+        janela["resultado"].Update(f"{resultado:.2f}")
+        sg.popup("acabou")
     else:
         pass
 
