@@ -2,7 +2,8 @@ import PySimpleGUI as sg
 
 # Lista para armazenar os contatos
 contatos = []
-sg.theme("Python")
+
+sg.theme("LightGrey1")
 
 
 def criar_janela():
@@ -16,17 +17,17 @@ def criar_janela():
     # Layout da coluna da direita (detalhes do contato)
     coluna_direita = [
         [sg.Text("Detalhes do Contato")],
-        [sg.Text("Nome:"), sg.Input(key="-NOME-", size=(30, 1))],
-        [sg.Text("Telefone:"), sg.Input(key="-TELEFONE-", size=(30, 1))],
-        [sg.Text("Email:"), sg.Input(key="-EMAIL-", size=(30, 1))],
-        [sg.Text("Endereço:"), sg.Input(key="-ENDERECO-", size=(30, 1))],
-        [sg.Button("Salvar"), sg.Button("Limpar")],
+        [sg.Text("Nome:", size=(10, 1)), sg.Input(key="-NOME-", size=(30, 1))],
+        [sg.Text("Telefone:", size=(10, 1)), sg.Input(key="-TELEFONE-", size=(30, 1))],
+        [sg.Text("Email:", size=(10, 1)), sg.Input(key="-EMAIL-", size=(30, 1))],
+        [sg.Text("Endereço:", size=(10, 1)), sg.Input(key="-ENDERECO-", size=(30, 1))],
+        [sg.Button("Salvar", size=(10, 1)), sg.Button("Limpar")],
     ]
 
     # Layout principal com as duas colunas
     layout = [[sg.Column(coluna_esquerda), sg.VSeparator(), sg.Column(coluna_direita)]]
 
-    return sg.Window("Agenda de Contatos", layout, font=("Helvetica", 16))
+    return sg.Window("Agenda de Contatos", layout, font=("Helvetica", 14))
 
 
 def limpar_campos(window):

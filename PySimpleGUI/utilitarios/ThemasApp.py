@@ -1,5 +1,7 @@
 import PySimpleGUI as sg
 
+sg.theme("LightGrey1")
+
 
 def main():
     # Lista todos os temas disponíveis
@@ -15,7 +17,7 @@ def main():
     ]
 
     # Criar a janela principal
-    janela = sg.Window("Temas PySimpleGUI", layout)
+    janela = sg.Window("Temas PySimpleGUI", layout, font=("Courrier", 14))
 
     # Loop de eventos
     while True:
