@@ -9,7 +9,7 @@ coluna_direita = [
     [sg.Text("Conversor de temperatura Celcius x Fahrenheit")],
     [
         sg.Text("Valor"),
-        sg.InputText(size=(6, 1), key="-VALOR-"),
+        sg.InputText(size=(10, 1), key="-VALOR-"),
         sg.Combo(
             ["Celcius", "Fahrenheit"], default_value="Celcius", key="-TEMPERATURA-"
         ),
