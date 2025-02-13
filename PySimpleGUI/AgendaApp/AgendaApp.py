@@ -71,3 +71,10 @@ while True:
         janela["-ENDERECO-"].update(valores["endereco"])
 
 janela.close()
+
+# TODO
+# 1. Adicionar a funcionalidade de apagar um contato
+# 2. Adicionar a funcionalidade de editar(UPDATE) um contato
+# 3. analisar o design do app e melhorar
+# 4. criar o instalador do app
+# 5. tirar o codigo do faker na versao final ( beta)
