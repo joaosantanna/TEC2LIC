@@ -8,8 +8,8 @@ print(f" maiores numeros por linha = {maior}")
 media = np.mean(mat, axis=0)  # axis 0 - por coluna
 print(f"Media dos numeros por coluna = {media}")
 
-# mat.sort()
-# print(mat)
+# mat.sort() # o sort do numpy ordena os numeros nas suas
+# print(mat) # respectivas linhas
 valores = mat.copy()
 valores = np.ravel(valores)
 valores.sort()
